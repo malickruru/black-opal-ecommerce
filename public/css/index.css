@@ -1,0 +1,248 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap-grid.min.css');
+@import url('sidebar.css');
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+    /* overflow-x: hidden; */
+    padding: 0 !important;
+    margin: 0;
+}
+
+
+
+
+/* font */
+
+.hindi-font{
+  font-family: 'Hind Madurai';
+}
+.aboreto-font{
+  font-family: 'Aboreto';
+}
+
+/* card */
+
+.custom-card{
+  /* display: block;
+  border: none;
+  margin: 20px; */
+  /* padding: 10px; */
+  text-decoration: none;
+  height: 300px;
+  /* overflow: hidden; */
+  position: relative;
+  /* border-radius: 10px; */
+}
+
+
+.custom-card > .card-body{
+  height: 100px;
+  position: absolute;
+  background-color: #fff;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+
+
+/* overlay */
+
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: grid;
+	grid-template-columns: 100%;
+	pointer-events: none;
+	grid-template-rows: repeat(2,1fr);
+}
+
+.overlay__row {
+	background: black;
+	transform: scaleY(0);
+	will-change: transform;
+}
+
+.overlay__row:first-child {
+	transform-origin: 50% 0%;
+}
+
+.overlay__row:last-child {
+	transform-origin: 50% 100%;
+}
+
+/* preview */
+.overlay{
+    z-index: 1031;
+}
+
+
+.oh {
+	position: relative;
+    overflow: hidden;
+}
+
+.oh__inner {
+	will-change: transform;
+    display: inline-block;
+}
+
+.line {
+	transform-origin: 0 50%;
+	white-space: nowrap;
+	will-change: transform;
+}
+
+/* content */
+
+
+.content{
+    position: fixed;
+    width: 90vw;
+    height: 0vh;
+    overflow: hidden;
+    top: 10vh;
+    left: 10vh;
+    /* opacity: 0; */
+    pointer-events: none;
+    z-index: 1032;
+    display: flex;
+    
+}
+h2{
+    font-family: 'Hind Madurai';
+}
+
+
+.content *{
+    /* font-family: 'Aboreto'; */
+    color: #fff;
+}
+
+#c-desc{
+    font-family: 'Hind Madurai' ;
+}
+
+.c-img-container{
+    width: 30%;
+}
+
+.c-img-container img{
+    width: 100%;
+}
+
+.bg-none{
+    background-color: transparent;
+}
+
+.hover-underline-animation {
+    display: inline-block;
+    position: relative; 
+  }
+  
+  .hover-underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+  .input-num{
+    /* color: black; */
+    background-color: transparent;
+    width: 100px;
+    border: 1px #fff dashed;
+    outline: none;
+  }
+
+  .exit{
+    color: red;
+    font-size: 2em;
+  }
+
+  .float-end{
+    background-color: black;
+    color: #fff;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .float-end a{
+    font-size: 1em;
+    color: #fff;
+  }
+
+  /* avis */
+
+  .fils-item{
+    border-bottom: #fff 1px solid;
+  }
+  #fils{
+    overflow-y: scroll;
+    max-height: 50vh;
+  }
+
+/* width */
+#fils::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+#fils::-webkit-scrollbar-track {
+  background: #000; 
+}
+ 
+/* Handle */
+#fils::-webkit-scrollbar-thumb {
+  background: #888; 
+  border-radius: 15px;
+}
+
+/* Handle on hover */
+#fils::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+/* flex */
+
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center-start{
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
+/* recommandation */
+.recommandation{
+  cursor: pointer;
+}
+.recommandation:hover{
+  opacity: 0.7;
+}

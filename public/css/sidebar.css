@@ -1,0 +1,40 @@
+
+  
+  .sidebar {
+    width: 400px;
+    height: 100vh;
+    /* background-color: #000000; */
+    /* color: #fff; */
+    position: fixed;
+    left: -450px;
+    top: 0;
+    transition: left 0.5s;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    z-index: 10;
+  }
+  
+  .sidebar.open {
+    left: 0;
+  }
+  
+  
+  #toggle-sidebar {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    /* background-color: #000000;
+    color: #fff; */
+    border: none;
+    padding: 20px;
+    transition: left 0.5s;
+    z-index: 10;
+  }
+  
+  #toggle-sidebar.open {
+    left: 400px;
+  }
+  

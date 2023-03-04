@@ -9,10 +9,10 @@ use Illuminate\Support\Facades\Auth;
 
 class AvisController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('checkLogin', ['only' => [ 'create','showFormAvis']]);
-    }
+    // public function __construct()
+    // {
+    //     $this->middleware('checkLogin', ['only' => [ 'create','showFormAvis']]);
+    // }
 
     public function showFormAvis($id){
         $produit = Produit::find($id);

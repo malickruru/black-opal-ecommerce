@@ -11,7 +11,7 @@ const overlayRows = [...document.querySelectorAll('.overlay__row')];
 var ToggleComentBool = true;
 
 function show(obj) {
-    console.log(obj);
+    // console.log(obj);
 
     // remplisage de contenu
     document.getElementById('c-img').setAttribute('src', '../' + obj.produit.photo);
@@ -26,12 +26,14 @@ function show(obj) {
 
     // les commentaire
     // ajout commentaire
-    const dejaCommenter = obj.commentaire.find(commentaire => commentaire.avis.user_id === obj.user);
-    
-    if(!dejaCommenter){
-        document.getElementById('comment_header').innerHTML += `<a class='btn btn-outline ' href=./ajout_commentaire/${obj.produit.id} > Ajouter mon commentaire +</a>`
+    var dejaCommenter = obj.commentaire.find(commentaire => commentaire.avis.user_id === obj.user);
+    // console.log(dejaCommenter);
+
+    if(dejaCommenter == undefined){
+        document.getElementById('comment-header-right').innerHTML = `<a class='btn btn-outline ' href=./ajout_commentaire/${obj.produit.id} > Ajouter mon commentaire +</a>`
     }
 
+    
     
     obj.commentaire.forEach(e => {
         document.getElementById('fils').innerHTML +=`
@@ -89,6 +91,9 @@ function show(obj) {
 
 
 function closeShow() {
+    document.getElementById('fils').innerHTML =""
+    document.getElementById('comment-header-right').innerHTML =""
+    
     gsap.timeline({
         defaults: {
             duration: 1,

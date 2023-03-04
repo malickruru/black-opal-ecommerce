@@ -11,11 +11,11 @@ use Illuminate\Support\Facades\Auth;
 class CommandeController extends PanierController
 {
 
-    public function __construct()
-    {
-        $this->middleware('checkLogin', ['only' => ['showCreateForm','index','add']]);
+    // public function __construct()
+    // {
+    //     $this->middleware('checkLogin', ['only' => ['showCreateForm','index','add']]);
         
-    }
+    // }
     
     public function  showCreateForm(){
         $cart = session('panier_' . Auth::user()->id);

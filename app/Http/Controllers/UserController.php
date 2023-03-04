@@ -11,10 +11,10 @@ use Illuminate\Support\Facades\Validator;
 class UserController extends Controller
 {
 
-    public function __construct()
-    {
-        $this->middleware('checkLogin', ['only' => ['show', 'showChangePasswordForm', 'showUpdatePhoto']]);
-    }
+    // public function __construct()
+    // {
+    //     $this->middleware('checkLogin', ['only' => ['show', 'showChangePasswordForm', 'showUpdatePhoto']]);
+    // }
 
     public function showRegistrationForm()
     {

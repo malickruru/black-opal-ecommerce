@@ -60,10 +60,7 @@
         <div class="sdk">
             <h1>SDK SEAMLESS</h1>
             {{-- <button onclick="checkout()">Checkout</button> --}}
-            <form action="{{route('commande.create')}}" method="post">
-                @csrf
-                <input type="submit" value="valider le paiement" class="btn btn-primary">
-            </form>
+            
         </div>
     </div>
     

@@ -69,9 +69,7 @@
                                     </div>
                                     <div>
 
-                                        <button class="btn btn-outline rounded-none p-1"
-                                            onclick='show({{ json_encode($obj) }})'>Voir
-                                            article</button>
+                                        <button class="btn btn-outline rounded-none p-1" onclick='show({{ json_encode($obj) }})'>Voir article</button>
                                     </div>
                                 </div>
                                 
@@ -167,6 +165,9 @@
                 <div id='comment' class="d-none">
                     <div id="comment_header" class="flex justify-between p-3">
                         <h1 class="text-4xl p-1 aboreto-font">commentaires</h1>
+                        <div id="comment-header-right">
+                            
+                        </div>
                     </div>
                     
                     <div id="fils">

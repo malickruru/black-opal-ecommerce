@@ -70,14 +70,7 @@ return new class extends Migration
             $table->timestamps();
         });
 
-        Schema::create('paniers', function (Blueprint $table) {
-            $table->increments('id');
-            $table->unsignedInteger('user_id');
-            $table->unsignedInteger('produit_id');
-            $table->integer('quantite');
-            $table->timestamps();
-        });
-
+       
         Schema::create('avis', function (Blueprint $table) {
             $table->id();
             $table->unsignedInteger('user_id');

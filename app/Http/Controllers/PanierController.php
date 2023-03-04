@@ -10,10 +10,10 @@ use Illuminate\Support\Facades\Auth;
 
 class PanierController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('checkLogin', ['only' => ['addToCart','removeFromCart','showCart','updateQuantity','clearCart']]);
-    }
+    // public function __construct()
+    // {
+    //     $this->middleware('checkLogin', ['only' => ['addToCart','removeFromCart','showCart','updateQuantity','clearCart']]);
+    // }
     
     public function initCart()
     {

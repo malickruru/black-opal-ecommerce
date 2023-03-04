@@ -10,10 +10,10 @@ use Illuminate\Support\Facades\Auth;
 class EnvieController extends Controller
 {
 
-    public function __construct()
-    {
-        $this->middleware('checkLogin', ['only' => ['toggleEnvie', 'index']]);
-    }
+    // public function __construct()
+    // {
+    //     $this->middleware('checkLogin', ['only' => ['toggleEnvie', 'index']]);
+    // }
 
 
     public function toggleEnvie(Produit $produit)

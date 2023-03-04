@@ -60,7 +60,7 @@
                 </form>
 
             </div>
-            <div class="col-md-4 border-dashed border-2 border-neutral absolute right-0 bg-slate-50">
+            <div class="col-md-4 border-dashed border-2 border-neutral  right-0 bg-slate-50">
                 <h1 class="text-2xl text-center m-2">Ma facture</h1>
 
                 @foreach ($cart as $product)
@@ -119,7 +119,13 @@
                     </div>
                 @endif
                 <div class="center">
-                    <a href="{{ route('commande.showCreateForm') }}" class="btn btn-success m-2">valider le paiement</a>
+            
+                    <form action="{{route('commande.create')}}" method="post">
+                        @csrf
+                        <div class="bg-success m-2">
+                            <input type="submit" value="valider le paiement" class="btn btn-success">
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -180,8 +186,8 @@
                     <form action="{{ route('panier.create') }}" method="post">
                         @csrf
                         <input type="hidden" name="id" id="panier_produit_id">
-                        <input type="hidden" name="like" value="true">
                         <input type="hidden" name="price" id="panier_produit_price">
+                        <input type="hidden" name="like" value="true">
                         <button type="submit" class="my-5 e bg-none hover-underline-animation flex aboreto-font">
                             ajout au panier &nbsp;
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -207,6 +213,9 @@
             <div id='comment' class="d-none">
                 <div id="comment_header" class="flex justify-between p-3">
                     <h1 class="text-4xl p-1 aboreto-font">commentaires</h1>
+                    <div id="comment-header-right">
+                        
+                    </div>
                 </div>
                 
                 <div id="fils">

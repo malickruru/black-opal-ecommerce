@@ -9,10 +9,10 @@ use Illuminate\Support\Facades\Auth;
 
 class CodePromoController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('checkLogin', ['only' => [ 'create','index']]);
-    }
+    // public function __construct()
+    // {
+    //     $this->middleware('checkLogin', ['only' => [ 'create','index']]);
+    // }
 
     public function create(Request $request){
         // le code promo existe t-il

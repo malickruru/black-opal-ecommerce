@@ -30,6 +30,9 @@ Route::get('/register', [UserController::class, 'showRegistrationForm'])->name('
 Route::post('/register',[UserController::class, 'register'] );
 Route::get('/login',[UserController::class, 'showLoginForm'] )->name('login');
 Route::post('/login',[UserController::class, 'login'] );
+
+Route::middleware('auth')->group(function () {
+
 Route::get('/logout', [UserController::class, 'logout'])->name('logout');
 Route::get('/profil', [UserController::class, 'show'])->name('profil');
 Route::post('/profil', [UserController::class, 'update'])->name('profil.update');
@@ -64,7 +67,7 @@ Route::get('/valider_paiement', [CommandeController::class, 'showCreateForm'])->
 Route::post('/valider_paiement', [CommandeController::class, 'create'])->name('commande.create');
 Route::get('/mes_commandes', [CommandeController::class, 'index'])->name('commande.index');
 Route::post('/recommander/{id}', [CommandeController::class, 'add'])->name('commande.add');
-
+});
 
 
 

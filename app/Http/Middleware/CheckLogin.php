@@ -17,6 +17,7 @@ class CheckLogin
      */
     public function handle(Request $request, Closure $next)
     {
+        
         if (!Auth::check()) {
             return view('user.login');
         }

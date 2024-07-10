@@ -9,7 +9,7 @@ class SimilarityMatrix extends Model
 {
     use HasFactory;
 
-    protected $table = 'similarity_matrix';
+    protected $table = 'black_opal_similarity_matrix';
 
     protected $fillable = [
         'user_id_1',

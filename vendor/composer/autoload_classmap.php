@@ -34,7 +34,6 @@ return array(
     'App\\Models\\Commande' => $baseDir . '/app/Models/Commande.php',
     'App\\Models\\Envie' => $baseDir . '/app/Models/Envie.php',
     'App\\Models\\LienPromo' => $baseDir . '/app/Models/LienPromo.php',
-    'App\\Models\\Panier' => $baseDir . '/app/Models/Panier.php',
     'App\\Models\\Produit' => $baseDir . '/app/Models/Produit.php',
     'App\\Models\\SimilarityMatrix' => $baseDir . '/app/Models/SimilarityMatrix.php',
     'App\\Models\\User' => $baseDir . '/app/Models/User.php',

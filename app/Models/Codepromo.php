@@ -9,7 +9,7 @@ class Codepromo extends Model
 {
     use HasFactory;
 
-    protected $table = 'codepromos';
+    protected $table = 'black_opal_codepromos';
 
     protected $fillable = [
         'code',

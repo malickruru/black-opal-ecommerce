@@ -1,4 +1,4 @@
-<footer class="footer items-center p-4 m-0 bg-neutral text-neutral-content ">
+<footer class="footer items-center p-4 m-0 bg-neutral text-neutral-content  ">
     <div class="items-center  grid-flow-col">
         <a href="/" class="btn btn-ghost normal-case text-xl aboreto-font">Black Opal</a>
       <p>Copyright © 2023 - All right reserved</p>

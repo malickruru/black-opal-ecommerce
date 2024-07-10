@@ -65,6 +65,7 @@ class UserController extends Controller
 
         if (Auth::attempt($credentials)) {
             // dd(Auth::user());
+            
             return redirect()->intended()->with('success', 'Connexion réussie !');
         }
 

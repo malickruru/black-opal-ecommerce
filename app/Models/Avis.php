@@ -9,7 +9,7 @@ class Avis extends Model
 {
     use HasFactory;
 
-    protected $table = 'avis';
+    protected $table = 'black_opal_avis';
 
     protected $fillable = [
         'user_id',

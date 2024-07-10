@@ -9,11 +9,12 @@ class Categories extends Model
 {
     use HasFactory;
 
-protected $table = 'categories';
+    protected $table = 'black_opal_categories';
 
    protected $fillable = [
         "nom",
-        "sexe"
+        "sexe",
+        "active"
    ];
 
    public function produits(){

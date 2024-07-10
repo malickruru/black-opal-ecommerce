@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class LienPromo extends Model
 {
     use HasFactory;
-    protected $table = 'pivot_user_codepromo';
+    protected $table = 'black_opal_pivot_user_codepromo';
 
     protected $fillable = [
         'user_id',

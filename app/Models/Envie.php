@@ -9,7 +9,7 @@ class Envie extends Model
 {
     use HasFactory;
 
-    protected $table = 'envies';
+    protected $table = 'black_opal_envies';
     protected $fillable = [
         'user_id',
         'produit_id',

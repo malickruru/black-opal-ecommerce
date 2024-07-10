@@ -560,7 +560,6 @@ class ComposerStaticInita6d3d79b2659bc127e4910c9a26a306b
         'App\\Models\\Commande' => __DIR__ . '/../..' . '/app/Models/Commande.php',
         'App\\Models\\Envie' => __DIR__ . '/../..' . '/app/Models/Envie.php',
         'App\\Models\\LienPromo' => __DIR__ . '/../..' . '/app/Models/LienPromo.php',
-        'App\\Models\\Panier' => __DIR__ . '/../..' . '/app/Models/Panier.php',
         'App\\Models\\Produit' => __DIR__ . '/../..' . '/app/Models/Produit.php',
         'App\\Models\\SimilarityMatrix' => __DIR__ . '/../..' . '/app/Models/SimilarityMatrix.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',

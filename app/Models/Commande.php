@@ -9,7 +9,7 @@ class Commande extends Model
 {
     use HasFactory;
 
-    protected $table = 'commandes';
+    protected $table = 'black_opal_commandes';
 
     protected $fillable = [
         'user_id',

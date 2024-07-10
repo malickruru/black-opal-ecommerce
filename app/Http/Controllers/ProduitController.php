@@ -17,6 +17,7 @@ class ProduitController extends Controller
     {
         $categories = Categories::all();
     
+        
         if ($request->has('s')) {
             $searchTerm = $request->input('s');
     

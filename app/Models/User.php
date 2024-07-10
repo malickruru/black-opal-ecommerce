@@ -27,6 +27,8 @@ class User extends Authenticatable
         'password',
     ];
 
+    protected $table = 'black_opal_users';
+
     /**
      * The attributes that should be hidden for serialization.
      *
@@ -47,12 +49,12 @@ class User extends Authenticatable
     ];
 
     public function envie(){
-       return $this->belongsToMany(Produit::class,'envies','user_id','produit_id');
+       return $this->belongsToMany(Produit::class,'black_opal_envies','user_id','produit_id');
     }
 
     // recupérer tout les code promos
     public function promo(){
-        return $this->belongsToMany(Codepromo::class,'pivot_user_codepromo','user_id','codepromo_id');
+        return $this->belongsToMany(Codepromo::class,'black_opal_pivot_user_codepromo','user_id','codepromo_id');
     }
 
     // récupérer tous les lien promos

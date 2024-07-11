@@ -42,7 +42,7 @@ class CategorieController extends Controller
     {
         Categories::create([
             "nom" => $request->name,
-            
+            "sexe" => 'U'
         ]);
 
         return redirect(route("categorie.index"));

@@ -19,12 +19,12 @@
                 </h2>
             </div>
 
-            <div class="row flex gap-2 p-5 ">
-                <div class="card bg-neutral-100 w-96 shadow-xl cursor-pointer">
+            <div class="row flex gap-2 p-5 " >
+                <a class="card bg-neutral-100 w-96 shadow-xl cursor-pointer block" href="{{ route('categorie.index') }}">
                     <div class="card-body">
                     <h2 class="card-title text-center">Catégories</h2>
                     </div>
-                </div>
+                </a>
 
                 <div class="card bg-neutral-100 w-96 shadow-xl cursor-pointer">
                     <div class="card-body">

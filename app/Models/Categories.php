@@ -13,7 +13,7 @@ class Categories extends Model
 
    protected $fillable = [
         "nom",
-        "sexe",
+       
         "active"
    ];
 

@@ -4,6 +4,10 @@
     </div>
     <div class="flex-none">
         <ul class="menu menu-horizontal px-1">
+            @if (Auth::user()->isAdmin)
+                <li><a href="{{ route('admin.panel') }}">Admin</a></li>
+            @endif
+
             @if (Auth::check())
                 <li tabindex="0">
                     <a>

@@ -18,7 +18,7 @@ $array=$categorie->sortBy($sort,SORT_REGULAR,$order);
 		$search = $_GET['search'];
 		$array=[];
 		foreach ($categorie as $key ) {
-			if(strpos($key->name, $search) !== false){
+			if(strpos(strtolower($key->nom), strtolower($search) ) !== false){
 				array_push($array,$key);
 			}
 		}
@@ -37,6 +37,7 @@ function Toggleorder($order){
 
 @extends('layout')
 @section('content')
+	@include('Partials.header')
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             Catégories de produits
         </h2>
@@ -70,7 +71,7 @@ function Toggleorder($order){
 				<th class="py-3 px-6 border-r " >
 					<div class="flex items-center">
 						Nom
-					<a href="?sort=name&order={{Toggleorder($order)}}">
+					<a href="?sort=nom&order={{Toggleorder($order)}}">
 						@include('svg.sorted')
 					</a>
 					</div>
@@ -107,7 +108,7 @@ function Toggleorder($order){
                     {{$item->id}}
                 </td>
                 <td class="py-4 px-6 border-r">
-                    {{$item->name}}
+                    {{$item->nom}}
                 </td>
                 <td class="py-4 px-6 border-r">
                     {{$item->active== 1 ? 'oui' : 'non'}}
@@ -127,4 +128,4 @@ function Toggleorder($order){
 	</table>
     </div>
 	
-</x-app-layout>
+@endsection

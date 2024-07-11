@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AvisController;
+use App\Http\Controllers\CategorieController;
 use App\Http\Controllers\CodePromoController;
 use App\Http\Controllers\CommandeController;
 use App\Http\Controllers\EnvieController;
@@ -71,6 +72,11 @@ Route::middleware('auth')->group(function () {
 
 Route::middleware('admin')->group(function () {
     Route::get('/administration', [AdminController::class,'adminPanel'])-> name('admin.panel');
+    // categorie
+    Route::resource("administration/categorie", CategorieController::class);
+    Route::get('administration/categorie/{categorie}/delete', [CategorieController::class, 'delete'])->name('categorie.delete');
+
+
 });
 
 

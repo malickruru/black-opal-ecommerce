@@ -1,11 +1,10 @@
 @extends('layout')
 @section('content')
-    {{-- {{dd( $errors )}} --}}
-    {{-- {{dd( $errors->first('password') )}} --}}
-    <div class="container center h-screen">
-        <div class="card w-96 bg-neutral text-neutral-content">
-            <div class="card-body items-center text-center">
-                <h2 class="card-title">Inscription</h2>
+
+    <div class="container-fluid ">
+        <div class="row h-screen">
+            <div class="col-md-6 flex items-center justify-content-center flex-col">
+                <h1 class="text-4xl">Inscription</h1>
                 <form action="{{ route('register') }}" method="POST">
                     @csrf
                     <div class="form-group mt-2">
@@ -38,9 +37,11 @@
                     <button type="submit" class="btn btn-outline my-3">S'inscrire</button>
                 </form>
 
+            </div>
+            <div class="col-md-6" style="background-image: url('images/motif3.jpeg') ; background-size : cover">
 
             </div>
         </div>
+
     </div>
-    </div>
-@endsection
+    @endsection

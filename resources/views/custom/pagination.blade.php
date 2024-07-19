@@ -1,17 +1,17 @@
 <nav class="my-4">
-    <ul class="btn-group">
+    <ul class="btn-group join">
         {{-- Previous Page Link --}}
         @if ($paginator->onFirstPage())
-            <li ><span class="btn btn-outline  rounded-none rounded-l-lg">&laquo;</span></li>
+            <li ><span class="btn btn-neutral  rounded-none  rounded-l-lg">&laquo;</span></li>
         @else
-            <li><a href="{{ $paginator->previousPageUrl() }}" class="btn btn-outline  rounded-none rounded-l-lg "  rel="prev">&laquo;</a></li>
+            <li><a href="{{ $paginator->previousPageUrl() }}" class="btn btn-neutral  rounded-none rounded-l-lg "  rel="prev">&laquo;</a></li>
         @endif
 
         {{-- Pagination Elements --}}
         @foreach ($elements as $element)
             {{-- "Three Dots" Separator --}}
             @if (is_string($element))
-                <li class=" btn btn-outline  rounded-none "><span>{{ $element }}</span></li>
+                <li class=" btn btn-neutral  rounded-none "><span>{{ $element }}</span></li>
             @endif
 
             {{-- Array Of Links --}}
@@ -20,7 +20,7 @@
                     @if ($page == $paginator->currentPage())
                         <li class=" btn  rounded-none  "><span>{{ $page }}</span></li>
                     @else
-                        <li><a class=" btn btn-outline  rounded-none " href="{{ $url }}">{{ $page }}</a></li>
+                        <li><a class=" btn btn-neutral  rounded-none " href="{{ $url }}">{{ $page }}</a></li>
                     @endif
                 @endforeach
             @endif
@@ -28,9 +28,9 @@
 
         {{-- Next Page Link --}}
         @if ($paginator->hasMorePages())
-            <li><a class="btn btn-outline  rounded-none rounded-r-lg " href="{{ $paginator->nextPageUrl() }}" rel="next">&raquo;</a></li>
+            <li><a class="btn btn-neutral  rounded-none rounded-r-lg " href="{{ $paginator->nextPageUrl() }}" rel="next">&raquo;</a></li>
         @else
-            <li ><span class=" btn btn-outline  rounded-none  rounded-r-lg" >&raquo;</span></li>
+            <li ><span class=" btn btn-neutral  rounded-none  rounded-r-lg" >&raquo;</span></li>
         @endif
     </ul>
 </nav>

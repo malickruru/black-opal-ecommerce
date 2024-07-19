@@ -13,10 +13,16 @@ class CategorieController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //On récupère tous les Categorie
-    $categorie = Categories::get();
+
+    $query = Categories::query();
+            //On récupère tous les Article
+        if ($request->has('s') && !empty($request->input('s'))) {
+            $searchTerm = $request->input('s');
+            $query = $query->where('nom', 'like', '%' . $searchTerm . '%');
+        }
+        $categorie =$query->paginate(20);
 
     // On transmet les Categorie à la vue
     return view("categorie.index", compact("categorie"));

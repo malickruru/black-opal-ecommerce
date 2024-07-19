@@ -14,14 +14,14 @@ $array=$categorie->sortBy($sort,SORT_REGULAR,$order);
 		$array=$categorie->sortBy($sort,SORT_REGULAR,$order);
 	}
 
-	if(isset($_GET['search'])){
-		$search = $_GET['search'];
-		$array=[];
-		foreach ($categorie as $key ) {
-			if(strpos(strtolower($key->nom), strtolower($search) ) !== false){
-				array_push($array,$key);
-			}
-		}
+	if(isset($_GET['s'])){
+		$search = $_GET['s'];
+		// $array=[];
+		// foreach ($categorie as $key ) {
+		// 	if(strpos(strtolower($key->nom), strtolower($search) ) !== false){
+		// 		array_push($array,$key);
+		// 	}
+		// }
 		
 	}
 
@@ -115,11 +115,11 @@ function Toggleorder($order){
                 </td>
 				<td class="py-4 px-6 border-r">
 					<!-- Lien pour modifier un item : "categorie.edit" -->
-					<a class="underline text-blue-500" href="{{ route('categorie.edit', $item) }}" title="Modifier l'article" >Modifier</a>
+					<a class="underline text-blue-500" href="{{ route('categorie.edit', $item) }}" title="Modifier la categorie" >Modifier</a>
 				</td>
 				<td class="py-4 px-6">
 					<!-- Formulaire pour supprimer un Post : "categorie.destroy" -->
-					<a class="underline text-red-500" href="{{ route('categorie.delete', $item) }}" title="Modifier l'article" >Supprimer</a>
+					<a class="underline text-red-500" href="{{ route('categorie.delete', $item) }}" title="Supprimer la catégorie" >Supprimer</a>
 				</td>
 			</tr>
 			<?php $i++ ?>

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\AvisController;
 use App\Http\Controllers\CategorieController;
 use App\Http\Controllers\CodePromoController;
@@ -77,6 +78,13 @@ Route::middleware('admin')->group(function () {
     Route::get('administration/categorie/{categorie}/delete', [CategorieController::class, 'delete'])->name('categorie.delete');
 
 
+    // crud produit
+    Route::resource("administration/article", ArticleController::class);
+    Route::get('administration/article/{article}/delete', [ArticleController::class, 'delete'])->name('article.delete');
+
+    // Route::get("administration/article/{article}/add_image", [ArticleController::class,'add_image'])->name('article_img.add') ;
+// Route::post("administration/article/{article}/add_image", [ArticleController::class,'add_image_create'])->name('article_img.create') ;
+// Route::delete("administration/article/destroy_image/{article}", [ArticleController::class,'destroy_image'])->name('article_img.destroy') ;
 });
 
 

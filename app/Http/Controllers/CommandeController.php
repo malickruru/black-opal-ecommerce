@@ -86,7 +86,7 @@ class CommandeController extends PanierController
        
         
         // 2.lier tous les produit de la commande au panier avec une quantité de un
-        
+        // dd($cart);
         
         foreach ($commande->produit  as $produit){
             $item = [

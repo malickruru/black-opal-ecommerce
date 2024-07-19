@@ -14,7 +14,7 @@ class Produit extends Model
     protected $fillable = [
         'nom',
         'description',
-        'prix','photo'
+        'prix','photo','category_id','active'
     ];
 
     public function avis(){
@@ -24,4 +24,12 @@ class Produit extends Model
     public function moyenne() {
         return $this->avis()->avg('note');
     }
+
+    public function categorie()
+     {
+         $categorie= Categories::class;
+         
+         return $this->belongsTo($categorie , 'category_id');
+     }
+
 }

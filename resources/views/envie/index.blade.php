@@ -1,6 +1,6 @@
 @extends('layout')
 @section('content')
-    @include('Partials.header');
+    @include('Partials.header')
 
     <div class="container">
         @include('Partials.message')
@@ -10,7 +10,7 @@
         @endif
 
         @foreach ($produits as $item)
-        <div class="d-flex justify-content-around align-items-center">
+        <div class="d-flex justify-content-around align-items-center my-2">
 
         
             <img src="{{ URL::to($item->photo) }}" width="100px" alt="">

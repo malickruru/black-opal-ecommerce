@@ -2,7 +2,7 @@
 @section('content')
     @include('Partials.header');
 
-    <div class="container">
+    <div class=" mx-7">
         <h1 class="text-4xl text-center">Historique de mes commandes</h1>
         @foreach ($commandes as $item)
             <div class="flex">
@@ -34,7 +34,7 @@
                     </div>
                 </form>
             </div>
-            <div class="divider"></div>
+            <div class=" divider divider-neutral"></div>
         @endforeach
     </div>
     @include('Partials.footer')

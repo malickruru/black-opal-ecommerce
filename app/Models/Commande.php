@@ -17,6 +17,6 @@ class Commande extends Model
     ];
 
     public function produit(){
-        return $this->belongsToMany(Produit::class,'pivot_commande_produit','commande_id','produit_id');
+        return $this->belongsToMany(Produit::class,'black_opal_pivot_commande_produit','commande_id','produit_id');
     }
 }

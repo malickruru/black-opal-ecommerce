@@ -1,6 +1,6 @@
 @extends('layout')
 @section('content')
-    @include('Partials.header');
+    @include('Partials.header')
 
     <div class="container mb-3">
         @include('Partials.message')
@@ -19,12 +19,12 @@
             @endif
         </div>
 
-        <div class="rounded bg-base-200 w-1/3 p-0 m-auto">
+        <div class="rounded  w-1/3 p-0 m-auto">
             <form method="POST" action="{{ route('promo.create') }}" class="flex justify-between">
                 @csrf
               
-                    <input type="text" name="code" placeholder="ajouter le code promos" class="input focus:outline-none bg-none w-full max-w-xs text-accent-content placeholder-neutral-content">
-                    <button type="submit" class="btn bg-none rounded-none rounded-r-sm text-neutral-focus hover:text-neutral-content">Envoyer</button>
+                    <input type="text" name="code" placeholder="ajouter le code promos" class="input focus:outline-none focus:border-none bg-none w-full max-w-xs text-accent-content placeholder-neutral">
+                    <button type="submit" class="btn btn-neutral rounded-none rounded-r-sm text-neutral-focus hover:text-neutral-content">Envoyer</button>
             </form>
         </div>
 

@@ -26,17 +26,17 @@
                     </div>
                 </a>
 
-                <div class="card bg-neutral-100 w-96 shadow-xl cursor-pointer">
+                <a class="card bg-neutral-100 w-96 shadow-xl cursor-pointer block" href="{{ route('article.index') }}">
                     <div class="card-body">
                     <h2 class="card-title text-center">Produits</h2>
                     </div>
-                </div>
+                </a>
 
-                <div class="card bg-neutral-100 w-96 shadow-xl cursor-pointer">
+                {{-- <div class="card bg-neutral-100 w-96 shadow-xl cursor-pointer">
                     <div class="card-body">
                     <h2 class="card-title text-center">Clients</h2>
                     </div>
-                </div>
+                </div> --}}
 
 
             </div>

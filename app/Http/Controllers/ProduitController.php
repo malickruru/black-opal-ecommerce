@@ -14,29 +14,25 @@ class ProduitController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index(Request $request)
-    {
-        $categories = Categories::all();
-    
-        
-        if ($request->has('s')) {
-            $searchTerm = $request->input('s');
-    
-            if ($searchTerm == "") {
-                $produits = Produit::paginate(9);
-            } else {
-                $produits = Produit::where('nom', 'like', '%' . $searchTerm . '%')->paginate(9);
-            }
-        } else {
-            $produits = Produit::paginate(9);
-        }
-    
-        return view('welcome',compact("produits","categories"));
+{
+    $categories = Categories::where('active', 1)->get();
+
+    $query = Produit::where('active', 1);
+
+    if ($request->has('s') && !empty($request->input('s'))) {
+        $searchTerm = $request->input('s');
+        $query = $query->where('nom', 'like', '%' . $searchTerm . '%');
     }
+
+    $produits = $query->paginate(9);
+
+    return view('welcome', compact('produits', 'categories'));
+}
 
     public function categorie($id)
     {
-        $produits =  Categories::find($id)->produits()->paginate(9); 
-        $categories = Categories::all();
+        $produits =  Categories::find($id)->produits()->where('active',1)->paginate(9); 
+        $categories = Categories::where('active',1)->get();
         return view('welcome',compact("produits","categories"));
     }
 

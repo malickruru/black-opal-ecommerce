@@ -35,7 +35,7 @@
                 <p class="text-center mt-3">Vous n'avez pas de compte ? <a href="{{ route('register') }}"
                         class="link">Inscrivez-vous</a></p>
             </div>
-            <div class="col-md-6" style="background-image: url('https://shop.vlisco.com/media/catalog/category/VLS7728.012_BannerDesktop.jpg')">
+            <div class="col-md-6" style="background-image: url('images/VLS7728.012_BannerDesktop.jpg')">
 
             </div>
         </div>

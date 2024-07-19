@@ -1,12 +1,13 @@
 <!doctype html>
-<html lang="en" data-theme="retro">
+<html lang="en" data-theme="duafe">
 
 <head>
     <meta charset="utf-8" >
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-    <title>RURU</title>
-
+    
+    <title>Duafe</title>
+    <link rel="icon" type="image/x-icon" href="/images/peigne.ico">
     {{-- <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/"> --}}
 
 
@@ -14,9 +15,10 @@
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    @vite('resources/css/app.css')
     {{-- <link href="{{ URL::to('css/bootstrap.min.css') }}" rel="stylesheet"> --}}
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.2/dist/full.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
+    {{-- <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.2/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script> --}}
     <link href="{{ URL::to('css/index.css') }}" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -86,6 +88,7 @@
 </head>
 
 <body>
+        <audio id="audioPlayer" src="{{ URL::to('sound/water.mp3') }}"></audio>
 
     @yield('content')
    
@@ -98,7 +101,18 @@
     {{-- <script src="{{ URL::to('js/bootstrap.bundle.min.js') }}"></script> --}}
     <script src="{{ URL::to('js/show.js') }}"></script>
     <script src="{{ URL::to('js/sidebar.js') }}"></script>
+    <script src="{{ URL::to('js/audio.js') }}"></script>
+    <script>
+        addEventListener("DOMContentLoaded", (event) => {
+    let alert = document.querySelector('.alert')
 
+    if (alert) {
+        setTimeout(() => {
+            alert.style.display= 'none'
+        }, 5000);
+        };
+    })
+    </script>
 
 </body>
 

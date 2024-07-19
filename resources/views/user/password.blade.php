@@ -7,7 +7,7 @@
     <div class="container">
         @include('Partials.message')
     </div>
-    <div class="container center my-5">
+    <div class="container center  h-screen">
     <div class="card w-96 bg-neutral text-neutral-content">
         <div class="card-body items-center text-center">
             <h2 class="card-title">Changez mot de passe</h2>
@@ -34,3 +34,5 @@
 </div>
     @include('Partials.footer')
 @endsection
+
+
